@@ -8,7 +8,7 @@ To get started:
 
 1. Clone the repository:
 
-`git clone https://github.com/peoray/tailwind-boilerplate.git`
+`git clone https://github.com/zebrasus/tailwind-boilerplate.git`
 `cd tailwind-boilerplate`
 
 2. Install the dependencies:
