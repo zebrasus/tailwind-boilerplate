@@ -3,7 +3,7 @@ document.getElementById('toggle-mobile-menu').addEventListener('click', function
 
     document.querySelector('.header nav').classList.toggle('open');
 });
-
+/*
 document.querySelectorAll('.dropdown > a').forEach(function(a) {
     a.addEventListener('click', function(e) {
         e.preventDefault();
@@ -14,3 +14,4 @@ document.querySelectorAll('.dropdown > a').forEach(function(a) {
         e.target.nextElementSibling.classList.toggle('open');
     });
 });
+*/

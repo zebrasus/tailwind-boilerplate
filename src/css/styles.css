@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+body {
+    font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+}
 
 .wrapper {
     max-width: 1150px;
@@ -11,7 +14,6 @@
     width: 90%;
 }
 
-/*@media (min-width: 768px) and(max-width: 992px) {*/
 @media (max-width: 1024px) {
     .wide-wrapper, .wrapper {
         width: 90%;
@@ -19,26 +21,8 @@
     }
 }
 
-.header nav ul li:hover ul {
-    @apply block;
-}
-
-.header nav ul li ul:after {
-    position: absolute;
-    left: 50%;
-    margin-left: -15px;
-    top: -15px;
-    width: 0;
-    height: 0;
-    content: '';
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-bottom:15px solid #eee
-}
-
 .header #toggle-mobile-menu {
-    @apply absolute p-2.5 pr-0 inline-block lg:hidden;
-    top: -9px;
+    top: 0;
     right: 0;
     width: 18px;
     height: 18px;
@@ -48,95 +32,34 @@
     text-indent:-9999em;
 }
 
-body.data-and-trends .header {
-    box-shadow: none;
-    border:none;
-}
-
-/*@media screen and (max-width: 1100px) {*/
 @media screen and (max-width: 1024px) {
-    .header {
-        padding: 10px 0;
-        margin-top: 2.5%;
-        margin-bottom:0
-    }
-
     .header a img {
-        max-width:180px
+        max-width:180px;
     }
 
     .header nav {
-        @apply block;
-        @apply relative;
         top: auto;
         right: auto;
         padding:5% 0 2.5%;
-        transition:all ease-in-out 0.1s;
     }
     .header nav:not(.open) {
         display: none;
     }
 
-    .header nav ul li.dropdown a {
-        background: url(../imgs/top.png) no-repeat;
-        background-size: 12px;
-        background-position:100% 50%
-    }
-
-    .header nav ul li ul {
-        @apply block transform-none;
-    }
-    .header nav ul li ul:not(.open) {
-        display:none;
-    }
-
-    .header nav ul li.dropdown ul a {
-        background-image:none !important
-    }
-
-    .header nav ul li {
-        @apply block;
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
-        margin-left:0;
-    }
-
     .header nav ul li a {
-        @apply block;
-        margin:0;
         padding:2.5% 0
     }
-
-    .header nav ul li ul {
-        margin-left: 0;
-        @apply relative;
-        top: auto;
-        left: auto;
-        @apply w-full;
-        padding: 2.5% 0;
-        border:none
-    }
-
-    .header nav ul li ul:after {
-        border:none
-    }
-
-    .header nav ul li.small-dropdown ul {
-        width: 90%;
-        margin-left:0
-    }
-
 }
 
 .homepage .splash {
-    @apply border-b border-gray-200 bg-right-top bg-no-repeat mx-auto;
-    min-height: 440px;
+    min-height: 555px;
     padding: 5% 42% 5% 0;
     background-image: url(../imgs/steve-splash.jpg);
-    background-size: 485px 600px;
+    background-position: 100% 0%;
+    background-repeat:no-repeat;
+    background-size: 485px auto;
 }
 
-/*@media screen and (max-width: 992px) {*/
 @media screen and (max-width: 1024px) {
     .homepage .splash {
         background-size: 380px auto;
@@ -146,18 +69,10 @@ body.data-and-trends .header {
 }
 
 @media screen and (max-width: 768px) {
-    .homepage {
-        margin-bottom:50px;
-    }
-
     .homepage .splash {
         padding: 5% 0 60% 0;
         background-size: 50%;
         background-position: 40% 110%;
         text-align:center;
-    }
-
-    .homepage .quote h3 {
-        font-size:27px;
     }
 }
