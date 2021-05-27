@@ -1,7 +1,7 @@
 document.getElementById('toggle-mobile-menu').addEventListener('click', function(e) {
     e.preventDefault();
 
-    document.querySelector('.header nav').classList.toggle('open');
+    document.querySelector('.header nav').classList.toggle('hidden');
 });
 /*
 document.querySelectorAll('.dropdown > a').forEach(function(a) {
