@@ -19,6 +19,48 @@ body {
     background-size: 485px auto;
 }
 
+.youtube {
+    position: relative; 
+    padding-bottom: 56.25%; 
+    height: 0; 
+    overflow: hidden;
+}
+.youtube a,
+.youtube iframe {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+}
+.youtube iframe {
+    display: none;
+}
+.youtube a {
+    display: block;
+}
+.youtube a:after {
+    content:"";
+    background: url(../imgs/play-circle.png) 50% 50% no-repeat;
+    background-size: contain;
+    display:block;
+    width:80px;
+    height:80px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin-left: -40px;
+    margin-top: -40px;
+}
+.youtube a img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+.youtube iframe[src=""] {
+    display:none;
+}
+
 @media screen and (max-width: 1024px) {
     .homepage .splash {
         background-size: 380px auto;

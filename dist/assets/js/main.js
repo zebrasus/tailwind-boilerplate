@@ -3,15 +3,20 @@ document.getElementById('toggle-mobile-menu').addEventListener('click', function
 
     document.querySelector('.header nav').classList.toggle('hidden');
 });
-/*
-document.querySelectorAll('.dropdown > a').forEach(function(a) {
+
+document.querySelectorAll('.toggle').forEach(function(a) {
     a.addEventListener('click', function(e) {
         e.preventDefault();
         
-        var open = e.target.closest('nav').querySelector('.open');
-        if(open && e.target.nextElementSibling != open) open.classList.remove('open');
-
-        e.target.nextElementSibling.classList.toggle('open');
+        e.target.nextElementSibling.classList.toggle('hidden');
     });
 });
-*/
+
+document.querySelectorAll('.youtube a').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        e.target.nextElementSibling.src = e.target.href;
+        e.target.nextElementSibling.style.display = "block";
+    });
+});
